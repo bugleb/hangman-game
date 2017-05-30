@@ -1,4 +1,146 @@
+@font-face {
+    font-family: digitalFont;
+    src: url(fonts/digital-7.ttf);
+}
+
+body {
+	background-color: lightgray;
+	background-image: url(../images/ice.jpg);
+	background-size: 100%;
+	font-family: 'Play', sans-serif;
+	/*overflow: hidden;*/
+}
+
+.container {
+	display: table;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+}
+
+.hangman {
+	/*TODO: figure out the real way to match height of other column*/
+	height: 543px;
+	width: 480px;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-image: url(../images/hangman_gallows.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.scoreboard {
+	background-color: #333333;
+	border: 2px solid gold;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.scoreboard-header {
+	color: gold;
+}
+
+.score-area {
+	color: white;
+}
+
+.score {
+	background-color: black;
+	width: 50%;
+	font-size: 3em;
+	font-family: digitalFont;
+	color: red;
+	margin: 0 auto;
+	border: 1px solid gray;
+}
+
+.word-area {
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
 #current-word {
 	white-space: pre;
-	letter-spacing: 5px;
+	letter-spacing: 10px;
+	font-size: 2.5em;
+	line-height: 2em;
+	color: darkred;
+}
+
+#letters {
+	margin-top: 30px;
+	font-size: 2.5em;
+	word-wrap: break-word;
+	letter-spacing: 15px;
+}
+
+#gallows {
+	position: relative;
+	height: 75%;
+}
+
+#head {
+	position: relative;
+	top: 98px;
+	left: 273px;
+	opacity: 0.0;
+}
+
+#body {
+	position: relative;
+	top: 83px;
+	left: 309px;
+	opacity: 0.0;
+}
+
+#right-arm {
+	position: relative;
+	top: -78px;
+	left: 209px;
+	opacity: 0.0;
+}
+
+#left-arm {
+	position: relative;
+	top: -155px;
+	left: 340px;
+	opacity: 0.0;
+}
+
+#right-leg {
+	position: relative;
+	top: -147px;
+	left: 248px;
+	opacity: 0.0;
+}
+
+#left-leg {
+	position: relative;
+	top: -274px;
+	left: 349px;
+	opacity: 0.0;
 }

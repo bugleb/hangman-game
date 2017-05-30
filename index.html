@@ -5,12 +5,78 @@
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<div>Wins: <span id="wins">0</span></div>
-	<div>Losses: <span id="losses">0</span></div>
-	<div>Current Word: <span id="current-word"></span></div>
+	<div class="outer">
+		<div class="middle">
+			<div class="inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="panel panel-default hangman">
+								<div class="panel-body">
+									<div id="head"><img src="assets/images/hangman_head.png" alt="head"></div>
+									<div id="body"><img src="assets/images/hangman_body.png" alt="body"></div>
+									<div id="right-arm"><img src="assets/images/hangman_right_arm.png" alt="right arm"></div>
+									<div id="left-arm"><img src="assets/images/hangman_left_arm.png" alt="left arm"></div>
+									<div id="right-leg"><img src="assets/images/hangman_right_leg.png" alt="right leg"></div>
+									<div id="left-leg"><img src="assets/images/hangman_left_leg.png" alt="left leg"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="panel panel-default scoreboard">
+									<div class="panel-body">
+										<div class="row scoreboard-header">
+											<h1>HOCKEY HANGMAN</h1>
+										</div>
+										<div class="row score-area">
+											<div class="col-lg-6">
+												<h1>US</h1>
+												<div class="score">
+													<span id="wins">0</span>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<h1>THEM</h1>
+												<div class="score">
+													<span id="losses">0</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="panel panel-default word-area">
+									<div class="panel-body">
+										<div class="col-lg-12">
+											<!-- <div>Current Word: <span id="current-word"></span></div> -->
+											<div class="row">
+												<div class="col-lg-12">
+													<h3><u>CURRENT WORD</u></h3>
+													<div class="hidden-word">
+														<span id="current-word"></span>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div id="letters"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script type="text/javascript" src="assets/js/game.js"></script>
 </body>
